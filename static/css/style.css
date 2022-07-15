@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: url('/media/jack-b-hRwrvvZHk70-unsplash.webp') no-repeat center center fixed;
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-color: #666;
+    height: calc(100vh - 164px);
+    color: #fff;
+    font-family: 'Lato';
+}
+
+a {
+    color: #000;
+}
+
+a:hover {
+    color: #555;
+}
+
+.nav-link {
+    padding: 0 1rem;
+}
+
+.logo-font {
+    font-family: 'MedievalSharp', sans-serif;
+}
+
+.logo-font-shadow {
+    text-shadow: #000 2px 2px 0px;
+}
+
+#topnav-logo {
+    display: flex;
+    align-items: center;
+}
+
+#topnav-logo img {
+    margin-right: 0.25rem;
+    height: 40px;
+}
+
+#topnav-logo h2 {
+    margin-top: 1.25rem;
+    font-weight: bold;
+}
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 80%;
+    }
+}
+
+/* fixed top navbar only on medium and up */
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .header-container {
+        padding-top: 164px;
+    }
+}
+
+/* pad the top a bit when navbar is collapsed on mobile */
+@media (max-width: 991px) {
+    .header-container {
+        padding-top: 116px;
+    }
+
+    body {
+        height: calc(100vh - 116px);
+    }
+}
